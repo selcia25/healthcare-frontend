@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online HealthCare</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/8a3d976fe3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body style="background-color: lightseagreen">
+
+<!--Navbar Section-->
+
+    <nav id="navbar">
+      <span id="logo">
+        <img src="images/logo.svg" alt="" />
+      </span>
+      <ul>
+        <li class="item"><a href="#home">HOME <i class="fa fa-home"></i></a></li>
+        <li class="item"><a href="#about">ABOUT <i class="fa fa-group"></i></a></li>
+        <li class="item"><a href="#services-container">SERVICES <i class="fa fa-medkit"></i></a></li>
+        <li class="item"><a href="#donate-us">DONATE <i class="fa fa-heart"></i></a></li>
+        <li class="item"><a href="#gallery">GALLERY <i class="fa fa-camera"></i></a></li>
+        <li class="item"><a href="#contact-us">CONTACT US <i class="fa fa-phone"></i></a></li>
+      </ul>
+    </nav>
+
+<!--Home Section-->
+
+    <section id="home">
+      <h1 class="h-primary">HEALING STARTS HERE <i class="fa fa-heartbeat"></i></h1>
+      <p>Your health and healing is our top most priority!</p>
+      <form class="searchbar" action="#">
+                <input id="searchbar"
+                type="text"
+                    placeholder=" Search for doctors online!"
+                    name="search">
+                <button>
+                    <i class="fa fa-search"
+                        style="font-size: 18px;">
+                    </i>
+                </button>
+            </form>
+      <button
+        type="button"
+        class="btn"
+        onclick="bookAppointment()"
+        style="
+          color: white;
+          font-weight: bolder;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+            sans-serif;
+          font-size: 25px;
+          background-color: darkcyan;
+          border-color: black;
+          border-radius: 15px;
+        "
+      >
+        Book your appointment with our doctors now!
+      </button>     
+    </section>
+
+<!--About Section-->
+
+    <section id="about">
+      <h1 class="h-primary center">ABOUT US</h1>
+      <div class="about1">
+        <h1 class="about-head">MISSION</h1>
+        <p class="about-para">
+          Our mission is to provide accurate and up-to-date health information
+          and connect patients with the best healthcare providers.
+        </p>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">EXPERTISE</h5>
+                <p class="card-text">
+                  Our professionals typically have undergone extensive training
+                  and education to gain the knowledge and skills necessary to
+                  provide quality care to their patients.
+                </p>
+                <button href="#" class="button">
+                  <span>Click here to read more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">PATIENT-CENTERED CARE</h5>
+                <p class="card-text">
+                  Our commitment to patient-centered care is paramount. We
+                  strive to put preferences of our patients at the forefront of
+                  everything we do, from the design of our website to the
+                  delivery of our services.
+                </p>
+                <button href="#" class="button">
+                  <span>Click here to read more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">HIGH QUALITY CARE REMOTELY</h5>
+                <p class="card-text">
+                  We make use of several technology and tools to deliver high
+                  quality services to our patients to give them a wonderful
+                  medical experience.
+                </p>
+                <button href="#" class="button">
+                  <span>Click here to read more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">VALUES</h5>
+                <p class="card-text">
+                  We believe that everyone deserves access to quality healthcare
+                  and are committed to providing inclusive and equitable care
+                  for all.
+                </p>
+                <button href="#" class="button">
+                  <span>Click here to read more</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--Services Section-->
+
+    <section id="services-container">
+      <h1 class="h-primary center">WHY CHOOSE US</h1>
+      <div
+        id="carouselExample"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner my-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption d-none d-md-block">
+              <span class="bold">ONLINE DIAGNOSIS AND TREATMENT</span>
+              <p>
+                We provide artificial intelligence to diagnose & provide
+                treatment.
+              </p>
+            </div>
+            <img src="images/medication.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/pharmacy.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <span class="bold">ONLINE PHARMACY SERVICES</span>
+              <p>
+                You can order medications and have them delivered to their
+                doorstep.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/mental-health.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <span class="bold">MENTAL HEALTH SUPPORT</span>
+              <p>
+                Online counselling and therapy are available for mental health
+                issues.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Bootstrap script-->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"
+      ></script>
+    </section>
+
+<!--Donation section-->
+
+    <section id="donate-us">
+      <h1 class="h-primary center">DONATE US</h1>
+      <div class="donate1">
+        <p class="donate-para"  style="font-size:50px; padding-top: 30px">Your support makes a huge difference</p>
+        <button type="button" class="button" onclick="donateUs()" style="display:block; margin:20px auto;">
+          <span>Donate now</span>
+        </button>
+        <div class="row justify-content-center">
+          <div class="col-3 mb-3 mb-sm-0">
+            <div class="card donate2" style="width: 18rem; height:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">$55</h5>
+                <p class="card-text">
+                  You can give a premature baby a fighting chance at life, by helping to buy life-saving equipment for our Newborn Intensive Care Unit.
+                </p>
+                <button type="button" class="button" onclick="donate55()">
+                  <span>Donate here!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 mb-3 mb-sm-0">
+            <div class="card donate2" style="width: 18rem; height:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">$100</h5>
+                <p class="card-text">
+                  You can help fund education programs to overcome challenges associated with problematic menopausal symptoms and incontinence.
+                </p>
+                <button type="button" class="button" onclick="donate100()">
+                  <span>Donate here!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 mb-3 mb-sm-0">
+            <div class="card donate2" style="width: 18rem; height:18rem;">
+              <div class="card-body">
+                <h5 class="card-title">$250</h5>
+                <p class="card-text">
+                 You can provide a researcher with the tools to help them develop life-changing treatments for women and babies in our care.
+                </p>
+                <button type="button" class="button" onclick="donate250()">
+                  <span>Donate here!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="donate-para"  style="font-size:30px; padding-top: 30px">Donate over the phone</p>
+        <p class="donate-para"  style="font-size:15px; padding-bottom: 20px">If you’d prefer not to donate online, please call us on +91 9876543210 to donate over the phone or for direct deposit details.</p>
+
+      </div>     
+    </section>
+
+<!--Gallery Section-->
+
+    <section id="gallery">
+      <h1 class="h-primary center">GALLERY</h1>
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/2.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/3.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/4.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/5.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/6.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="images/7.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+<!--Contact-us Section-->
+
+    <section id="contact-us">
+      <h1 class="h-primary center">CONTACT US</h1>
+      <div id="contact-box">
+        <form class="contactbutton" action="">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Please enter your name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Please enter your email address"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number: </label>
+            <input
+              type="text" max="10"
+              name="phone"
+              id="phone"
+              placeholder="Please enter your phone number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Send us a message: </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Type here..."
+            ></textarea>
+          </div>
+          <button type="button" onclick="submitButton()" class="submit">Submit</button>
+        </form>  
+      </div>
+    </section>
+
+<!--Footer Section-->
+
+  </section>
+    <footer>
+      <!--Social media icon section-->
+        <div class="footer-social">
+      <a href="https://github.com/selcia25" class="generic-anchor" target="_blank" title="Github" itemprop="significantLink"><i class="fa fa-github"></i></a>
+      <a href="https://www.facebook.com/" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="#contact-us" class="generic-anchor" target="_blank" title="Website" itemprop="significantLink"><i class="fa fa-google"></i></a>
+      🙋‍♀️Let's Talk!>>
+      <a href="selcia2110605@gmail.com" class="generic-anchor" target="_blank" title="Gmail" itemprop="significantLink"><i class="fa fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/selcia-s-405206243/" class="generic-anchor" target="_blank" title="LinkedIn" itemprop="significantLink"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+        </div>
+      <!--Copyright section-->
+      <div class="center footer">
+        &copy; 2023 Copyright: <a href="https://github.com/selcia25">github/selcia25</a> All rights reserved! 
+      </div>
+    </footer>
+  </body>
+</html>
